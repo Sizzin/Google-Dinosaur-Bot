@@ -17,7 +17,7 @@ def pressSpace():
 	pyautogui.keyUp('down')
 	pyautogui.keyDown('space')
 	print('Jump')
-	time.sleep(0.01)
+	time.sleep(0.1)
 	pyautogui.keyUp('space')
 	pyautogui.keyDown('down')
 
