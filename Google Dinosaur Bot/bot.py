@@ -4,16 +4,14 @@ import numpy
 import time
 
 class Coordinates():
-	replayBtn = (340,390)
-	dinosaur = (190,408) #170,391
-	#350 coordenada x para checar arvores no caminho
-	#410 coordenada y para o pássaro
+	replayBtn = (340,390) #based on half the screen in 1366x768 resolution
+	dinosaur = (190,408) #based on half the screen in 1366x768 resolution
 
+	
 def restartGame():
 	pyautogui.click(Coordinates.replayBtn)
 	pyautogui.keyDown('down')
     
-
 
 def pressSpace():
 	pyautogui.keyUp('down')
@@ -39,7 +37,7 @@ def imageGrab():
 def main():
 	restartGame()
 	while True:
-		if(imageGrab()!=446):
+		if(imageGrab()!=446): # this value may change based on the screen resolution
 			pressSpace()
 			time.sleep(0.01)
             
